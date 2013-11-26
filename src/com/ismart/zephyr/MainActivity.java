@@ -40,10 +40,7 @@ public class MainActivity extends AccountAuthenticatorActivity implements OnClic
 		setContentView(R.layout.activity_main);
 		accMgr = AccountManager.get(this);
 		String accNames[] = getAccounts();
-		if(accNames != null){
-			for(int i=0; i<accNames.length; i++)
-				Toast.makeText(getApplicationContext(), i+","+accNames[i], Toast.LENGTH_SHORT).show();
-		}
+		
 		etusername = (EditText) findViewById(R.id.username);
 		etpassword = (EditText) findViewById(R.id.password);
 		submit = (Button) findViewById(R.id.submit);
