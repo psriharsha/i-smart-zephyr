@@ -5,6 +5,7 @@ import android.accounts.AccountAuthenticatorActivity;
 import android.accounts.AccountAuthenticatorResponse;
 import android.accounts.AccountManager;
 import android.annotation.SuppressLint;
+import android.content.ContentResolver;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.StrictMode;
@@ -28,9 +29,11 @@ public class MainActivity extends AccountAuthenticatorActivity implements OnClic
 	public static final int RESP_CODE_SUCCESS = 0;
 	public static final int RESP_CODE_ERROR = 1;
 	public static final int RESP_CODE_CANCEL = 2;
+	
 	public ISmartAuthenticator iSmartAuthenticator;
 	public AccountAuthenticatorResponse response;
 	public AccountManager accMgr;
+	ContentResolver mResolver;
 	EditText etusername, etpassword;
 	Button submit;
 
@@ -103,7 +106,7 @@ public class MainActivity extends AccountAuthenticatorActivity implements OnClic
 	    		}
 	    		else {
 	    			Toast.makeText(getApplicationContext(), "Username or Password is incorrect"+response, Toast.LENGTH_SHORT).show();
-	    			hasErrors = false;
+	    			hasErrors = true;
 	    		}
 			}
 			catch(Exception e){
@@ -122,6 +125,8 @@ public class MainActivity extends AccountAuthenticatorActivity implements OnClic
 				intent.putExtra(AccountManager.KEY_AUTHTOKEN, accountType);
 				this.setAccountAuthenticatorResult(intent.getExtras());
 				this.setResult(RESULT_OK, intent);
+				Intent openVital = new Intent("com.ismart.zephyr.VitalsActivity");
+				startActivity(openVital);
 				this.finish();
 			}
 		}
