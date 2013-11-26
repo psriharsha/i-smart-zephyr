@@ -24,18 +24,33 @@ public final class R {
         public static final int ic_launcher=0x7f020000;
     }
     public static final class id {
-        public static final int action_settings=0x7f09000f;
-        public static final int hr=0x7f090007;
-        public static final int pa=0x7f09000d;
+        public static final int ButtonConnect=0x7f090007;
+        public static final int ButtonDisconnect=0x7f090008;
+        public static final int HRTextBox=0x7f09000a;
+        public static final int PeakAcc=0x7f090011;
+        public static final int Posture=0x7f09000f;
+        public static final int RespirationRate=0x7f09000b;
+        public static final int SkinTemperature=0x7f09000d;
+        public static final int StatusTextBox=0x7f090013;
+        public static final int Welcometext=0x7f090006;
+        public static final int action_settings=0x7f09001e;
+        public static final int hr=0x7f090016;
+        public static final int labelHeartRate=0x7f090009;
+        public static final int labelPeakAcc=0x7f090012;
+        public static final int labelPosture=0x7f090010;
+        public static final int labelRespRate=0x7f09000c;
+        public static final int labelSkinTemp=0x7f09000e;
+        public static final int labelStatusMsg=0x7f090014;
+        public static final int pa=0x7f09001c;
         public static final int password=0x7f090003;
-        public static final int posture=0x7f09000b;
-        public static final int rr=0x7f090008;
-        public static final int status=0x7f09000e;
+        public static final int posture=0x7f09001a;
+        public static final int rr=0x7f090017;
+        public static final int status=0x7f09001d;
         public static final int submit=0x7f090005;
-        public static final int tableRow1=0x7f090006;
-        public static final int tableRow2=0x7f090009;
-        public static final int tableRow3=0x7f09000c;
-        public static final int temp=0x7f09000a;
+        public static final int tableRow1=0x7f090015;
+        public static final int tableRow2=0x7f090018;
+        public static final int tableRow3=0x7f09001b;
+        public static final int temp=0x7f090019;
         public static final int textView1=0x7f090001;
         public static final int textView2=0x7f090000;
         public static final int textView3=0x7f090004;
@@ -43,7 +58,8 @@ public final class R {
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;
-        public static final int vitals=0x7f030001;
+        public static final int main=0x7f030001;
+        public static final int vitals=0x7f030002;
     }
     public static final class menu {
         public static final int main=0x7f080000;
@@ -92,5 +108,6 @@ public final class R {
     }
     public static final class xml {
         public static final int authenticator=0x7f040000;
+        public static final int sync_adapter=0x7f040001;
     }
 }
